@@ -125,6 +125,14 @@ class NetflixRepository:
                     print(e)
 
         #STATUS
+        seen = set()
+        unique = []
+        for c in self.__contents:
+            key = (c.title, c.viewership)
+            if key not in seen:
+                seen.add(key)
+                unique.append(c)
+        self.__contents = unique
         self.__is_loaded = True
 
     #GETTERS & FILTER METHODS 
