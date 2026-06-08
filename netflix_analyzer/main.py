@@ -40,7 +40,7 @@ def cetak_menu():
     print("  └─────────────────────────────────────────────┘")
 
     
-def input_pilihan(prompt="  Pilih menu (0-9): "):
+def input_pilihan(prompt="  Pilih menu (0-8): "):
     try:
         return input(prompt).strip()
     except (KeyboardInterrupt, EOFError):
@@ -261,7 +261,7 @@ def main():
             break
 
         else:
-            print("\n    Pilihan tidak valid. Masukkan angka 0-9.")
+            print("\n    Pilihan tidak valid. Masukkan angka 0-8.")
 
 
 if __name__ == "__main__":
